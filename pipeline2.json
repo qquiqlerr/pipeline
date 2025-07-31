@@ -1,0 +1,45 @@
+[
+    {
+        "name": "input",
+        "function": "add",
+        "input": {
+            "a": 100,
+            "b": 50
+        },
+        "output": [
+            "branch1",
+            "branch2"
+        ]
+    },
+    {
+        "name": "branch1",
+        "function": "multiply",
+        "input": {
+            "a": "input",
+            "b": 2
+        },
+        "output": [
+            "merge"
+        ]
+    },
+    {
+        "name": "branch2",
+        "function": "multiply",
+        "input": {
+            "a": "input",
+            "b": 3
+        },
+        "output": [
+            "merge"
+        ]
+    },
+    {
+        "name": "merge",
+        "function": "concatenate",
+        "input": {
+            "str1": "Merged: ",
+            "str2": "input"
+        },
+        "output": []
+    }
+]

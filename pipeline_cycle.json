@@ -1,0 +1,66 @@
+[
+    {
+        "name": "init",
+        "function": "add",
+        "input": {
+            "a": 1,
+            "b": 0
+        },
+        "output": [
+            "counter"
+        ]
+    },
+    {
+        "name": "counter",
+        "function": "counter",
+        "input": {
+            "current": "init",
+            "increment": 15
+        },
+        "output": [
+            "multiplier"
+        ]
+    },
+    {
+        "name": "multiplier",
+        "function": "multiply",
+        "input": {
+            "a": "counter",
+            "b": 2
+        },
+        "output": [
+            "condition"
+        ]
+    },
+    {
+        "name": "condition",
+        "function": "conditional",
+        "input": {
+            "value": "multiplier"
+        },
+        "output": [
+            "continue_loop",
+            "finish"
+        ]
+    },
+    {
+        "name": "continue_loop",
+        "function": "concatenate",
+        "input": {
+            "str1": "Continue with: ",
+            "str2": "counter"
+        },
+        "output": [
+            "counter"
+        ]
+    },
+    {
+        "name": "finish",
+        "function": "concatenate",
+        "input": {
+            "str1": "Final result: ",
+            "str2": "multiplier"
+        },
+        "output": []
+    }
+]

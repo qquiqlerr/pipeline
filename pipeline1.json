@@ -1,0 +1,55 @@
+[
+    {
+        "name": "start",
+        "function": "add",
+        "input": {
+            "a": 10,
+            "b": 5
+        },
+        "output": [
+            "check"
+        ]
+    },
+    {
+        "name": "check",
+        "function": "conditional",
+        "input": {
+            "value": "start"
+        },
+        "output": [
+            "small_path",
+            "big_path"
+        ]
+    },
+    {
+        "name": "small_path",
+        "function": "multiply",
+        "input": {
+            "a": "start",
+            "b": 2
+        },
+        "output": [
+            "final"
+        ]
+    },
+    {
+        "name": "big_path",
+        "function": "multiply",
+        "input": {
+            "a": "start",
+            "b": 10
+        },
+        "output": [
+            "final"
+        ]
+    },
+    {
+        "name": "final",
+        "function": "concatenate",
+        "input": {
+            "str1": "Final result: ",
+            "str2": "small_path"
+        },
+        "output": []
+    }
+]
